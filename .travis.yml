@@ -1,0 +1,13 @@
+language:
+    - objective-c
+
+before_install:
+    - brew update
+
+install:
+    - brew install cmake
+
+script:
+    - cmake --version
+    - cmake -H. -B_builds -GXcode
+    - cmake --build _builds
